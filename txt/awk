@@ -1,0 +1,4 @@
+print first column
+
+awk '{print $1}' file
+
