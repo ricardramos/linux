@@ -1,0 +1,4 @@
+sorting in descending order, from highest to lowest count.
+
+sort file | uniq -c|sort -nr
+
