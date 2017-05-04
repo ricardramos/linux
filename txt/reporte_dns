@@ -1,0 +1,5 @@
+awk '{print $1}' dump10 > te10
+
+rev te10 | cut -d'.' -f 1-3 |rev > ok2
+
+sort ok2 | uniq -c|sort -nr
