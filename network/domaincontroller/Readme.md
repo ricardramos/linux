@@ -1,6 +1,6 @@
 1.- editar /etc/resolv.conf y agregar el DC en la lista de servidores dns, ejemplo el servidor DC = 1.2.3.4
 
-.- nameserver 1.2.3.4
+nameserver 1.2.3.4
 
 2.- instalar
 
