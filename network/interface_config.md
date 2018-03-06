@@ -8,20 +8,14 @@
 | ifconfig eth0 up  | ip link set eth0 up | iniciar interface de red eth0 |
 | ifconfig eth0 down | ip link set eth0 down | bajar interface de red eth0|
 | ifconfig eth0 172.16.10.10 | ip addr add 172.16.10.10/24 dev eth0  | Poner direccion IP en eth0 con prefijo/24    |
-|  |   | |
+| ifconfig eth0 netmask 255.255.255.0 | ip addr add 172.16.10.10/24 dev eth0  | Configurar mascaca de subred|
+| ifconfig eth0:0 172.16.10.10 | ip addr add 172.16.10.21/24 dev eth0  |  configurar ip secundario en if eth0|
+| ifconfig eth0 mtu 9000  | ip link set eth0 mtu 9000 | Cambiar MTU a 9000 Bytes |
+| route add -net 172.16.10.0 netmask 255.255.255.0 dev eth0  | ip route add 172.16.10.0/24 dev eth0 |Agregar ruta estatica|
+| route add default gw 172.16.10.1| ip route add default via 192.168.1.1  |  Agregar ruta por default  |
+| netstat -rn |  ip route | Ver tabla de ruta|
+|  netstat -atn | ss| Ver listado de conexiones|
 |   |  | |
-|   |  | |
-|  |  |
-|  |   |    |
-|  |   | |
-|   |  | |
-|   |  | |
-|  |  |
-|  |   |    |
-|  |   | |
-|   |  | |
-|   |  | |
-|  |  |
 
 
 
