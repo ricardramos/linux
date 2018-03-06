@@ -31,4 +31,15 @@
     ss -e    Show detailed socket information
     ss -n    Do not resolve addresses
     ss -p    Show process using the socket
+    
+> arping    Send ARP request to a neighbour host
 
+    arping -I eth0 192.168.1.1    Send ARP request to 192.168.1.1 via interface eth0
+    arping -D -I eth0 192.168.1.1    Check for duplicate MAC addresses at 192.168.1.1 on eth0
+
+> ethtool     Query or control network driver and hardware settings
+
+    ethtool -g eth0    Display ring buffer for eth0
+    ethtool -i eth0    Display driver information for eth0
+    ethtool -p eth0    Identify eth0 by sight, typically by causing LEDs to blink on the network port
+    ethtool -S eth0    Display network and driver statistics for eth0
