@@ -19,7 +19,11 @@
 |   |  | |
 
 
+### otros comandos
 
+> link set
+
+     ip link set eth0 promisc on       Enable promiscuous mode for eth0
 
 
 
