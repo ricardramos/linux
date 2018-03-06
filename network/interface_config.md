@@ -1,3 +1,7 @@
+### comandos mas utilizados para configuracion de la red en GNU/Linux
+
+> la siguiente tabla muestra 2 formas de ejecutar el comando, mismo resultado pero con distinto software
+
 | # nettools  | #### iproute | #### Descrp |
 | ------------- | ------------- |----------------|
 | arp -a  | ip neigh  | ver tabla ARP
