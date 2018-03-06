@@ -47,3 +47,7 @@
     ethtool -i eth0    Display driver information for eth0
     ethtool -p eth0    Identify eth0 by sight, typically by causing LEDs to blink on the network port
     ethtool -S eth0    Display network and driver statistics for eth0
+
+> Opciones del comando ip neigh
+
+    ip neigh { add | del | change | replace } { ADDR [ lladdr LLADDR ] [ nud { permanent | noarp | stale | reachable } ] | proxy ADDR } [ dev DEV ]
