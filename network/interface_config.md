@@ -29,7 +29,6 @@
 
     ss -a    Show all sockets (listening and non-listening)
     ss -e    Show detailed socket information
-    ss -o    Show timer information
     ss -n    Do not resolve addresses
     ss -p    Show process using the socket
 
