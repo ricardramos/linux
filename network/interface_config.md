@@ -1,3 +1,3 @@
-> nettools                iproute
+> nettools                > iproute
 
 arp -a                  ip neigh
