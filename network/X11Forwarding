@@ -15,3 +15,19 @@ ssh -X 192.168.X.Y 'x2x -east -to :0'
 
 desde maquina local mover el maus hacia la derecha , con ello pasara al monitor del equipo remoto
 
+------------------
+
+xhost +
+
+editar archivo (en gnome)
+
+/etc/gdm3/daemon.conf
+
+habilitar en linea
+
+[security]
+DisallowTCP=false
+
+
+reiniciar X
+
