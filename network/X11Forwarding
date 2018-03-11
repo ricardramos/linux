@@ -1,0 +1,17 @@
+
+
+
+en maquima remota 192.168.X.Y habilitar
+
+/etc/ssh/sshd_config
+
+X11Forwarding yes
+
+reiniciar sshd
+
+en maquina local ejecutar
+
+ssh -X 192.168.X.Y 'x2x -east -to :0'
+
+desde maquina local mover el maus hacia la derecha , con ello pasara al monitor del equipo remoto
+
