@@ -1,0 +1,14 @@
+$ cat example.txt
+[noop] anticipatory deadline cfq
+noop anticipatory deadline [cfq]
+noop anticipatory [prueba
+multilinea]
+
+$ awk '$0=$2' FS=[ RS=] example.txt
+noop
+cfq
+prueba
+multilinea
+
+
+awk '{print $9}' combined_log | sort | uniq -c | sort
