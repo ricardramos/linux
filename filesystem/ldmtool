@@ -1,0 +1,53 @@
+# ldmtool
+ldm> scan /dev/sdc*
+[
+  "1bad5bbc-a4b5-42e1-8823-001014b00003"
+]
+ldm> show diskgroup 1bad5bbc-a4b5-42e1-8823-001014b00003
+{
+  "name" : "FOOBAR-Dg0",
+  "guid" : "1bad5bbc-a4b5-42e1-8823-001014b00003",
+  "volumes" : [
+    "Volume1"
+  ],
+  "disks" : [
+    "Disk1",
+    "Disk2"
+  ]
+}
+ldm> show volume 1bad5bbc-a4b5-42e1-8823-001014b00003 Volume1
+{
+  "name" : "Volume1",
+  "type" : "striped",
+  "size" : 3907039232,
+  "chunk-size" : 128,
+  "hint" : "D:",
+  "partitions" : [
+    "Disk1-01",
+    "Disk2-01"
+  ]
+}
+ldm> show partition 1bad5bbc-a4b5-42e1-8823-001014b00003 Disk1-01
+{
+  "name" : "Disk1-01",
+  "start" : 1985,
+  "size" : 1953519616,
+  "disk" : "Disk1"
+}
+ldm> create all
+Unable to create volume Volume1 in disk group 1bad5bbc-a4b5-42e1-8823-001014b00003: Disk Disk2 required by striped volume Volume1 is missing
+[
+]
+ldm> scan /dev/sdd*
+[
+  "1bad5bbc-a4b5-42e1-8823-001014b00003"
+]
+ldm> create all
+[
+  "ldm_vol_FOOBAR-Dg0_Volume1"
+]
+ldm>
+
+# dmsetup ls | grep ldm
+ldm_vol_FOOBAR-Dg0_Volume1        (254:4)
+# mount /dev/mapper/ldm_vol_FOOBAR-Dg0_Volume1 /mnt/whatever
