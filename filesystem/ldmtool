@@ -1,5 +1,5 @@
 # ldmtool
-ldm> scan /dev/sdc*
+ldm> scan /dev/sda*
 [
   "1bad5bbc-a4b5-42e1-8823-001014b00003"
 ]
@@ -38,7 +38,7 @@ ldm> create all
 Unable to create volume Volume1 in disk group 1bad5bbc-a4b5-42e1-8823-001014b00003: Disk Disk2 required by striped volume Volume1 is missing
 [
 ]
-ldm> scan /dev/sdd*
+ldm> scan /dev/sdb*
 [
   "1bad5bbc-a4b5-42e1-8823-001014b00003"
 ]
@@ -46,8 +46,9 @@ ldm> create all
 [
   "ldm_vol_FOOBAR-Dg0_Volume1"
 ]
-ldm>
+ldm>exit
 
+-------------------------------------
 # dmsetup ls | grep ldm
 ldm_vol_FOOBAR-Dg0_Volume1        (254:4)
-# mount /dev/mapper/ldm_vol_FOOBAR-Dg0_Volume1 /mnt/whatever
+# mount /dev/mapper/ldm_vol_FOOBAR-Dg0_Volume1 /mnt
