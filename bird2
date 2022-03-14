@@ -1,3 +1,12 @@
 -Muestra el estado de las sesiones BGP
 
 birdc show protocol
+
+
+-Muestra las redes anunciadas hacia el neighbor
+
+birdc show router export NOMBRE_PEER
+
+en ciscco BGP el comando similiar es:
+
+bgp ipv4 unicast neighbors IP_NEIGHBOR advertised-routes
