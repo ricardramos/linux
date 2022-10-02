@@ -1,0 +1,1 @@
+cat input.txt | sed 's/^[ \t]*//;s/[ \t]*$//' > output.txt
